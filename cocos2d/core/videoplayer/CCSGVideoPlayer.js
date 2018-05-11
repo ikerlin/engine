@@ -406,10 +406,16 @@ _ccsg.VideoPlayer.EventType = {
         video.style.position = "absolute";
         video.style.bottom = "0px";
         video.style.left = "0px";
+        video.style.zIndex = "-1";
         video.className = "cocosVideo";
         video.setAttribute('preload', true);
-        video.setAttribute('webkit-playsinline', '');
-        video.setAttribute('playsinline', '');
+        video.setAttribute('webkit-playsinline', 'true');
+        video.setAttribute('playsinline', 'true');
+        video.setAttribute('x-webkit-airplay', 'allow');
+        // video.setAttribute('autobufer', true);
+        // video.setAttribute('x5-video-player-type', 'h5');
+        // video.setAttribute('x5-video-player-fullscreen', false);
+        // video.setAttribute('x5-video-orientation', 'portraint');
         this._video = video;
         cc.game.container.appendChild(video);
     };
